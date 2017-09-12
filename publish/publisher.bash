@@ -24,13 +24,13 @@ if [ $? == 0 ];then
 		test -f $f && rm -rf $f
 	done
 
-	cp -r ${source_path}/${project}/* $dest_path/${project}.ylmf.com
+	cp -r ${source_path}/${project}/* $dest_path/${project}.xxx.com
 	
 	if [ $? == 0 ];then
 		echo -e "项目发布成功!" 
 		find ${source_path}/${project} -type f | xargs rm -f
-		chown -R www-data:www-data ${dest_path}/${project}.ylmf.com
-		chmod -R 0755 ${dest_path}/${project}.ylmf.com
+		chown -R www-data:www-data ${dest_path}/${project}.xxx.com
+		chmod -R 0755 ${dest_path}/${project}.xxx.com
 	else
 		echo -e "项目发布失败!"
 	fi
