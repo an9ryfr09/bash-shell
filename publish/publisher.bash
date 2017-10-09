@@ -29,8 +29,8 @@ if [ $? == 0 ];then
 	if [ $? == 0 ];then
 		echo -e "项目发布成功!" 
 		find ${source_path}/${project} -type f | xargs rm -f
-		chown -R www-data:www-data ${dest_path}/${project}.xxx.com
-		chmod -R 0755 ${dest_path}/${project}.xxx.com
+		chown -R www-data:www-data ${dest_path}/${project}
+		chmod -R 0755 ${dest_path}/${project}
 	else
 		echo -e "项目发布失败!"
 	fi
