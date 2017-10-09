@@ -24,7 +24,7 @@ if [ $? == 0 ];then
 		test -f $f && rm -rf $f
 	done
 
-	cp -r ${source_path}/${project}/* $dest_path/${project}.xxx.com
+	cp -r ${source_path}/${project}/* $dest_path/${project}
 	
 	if [ $? == 0 ];then
 		echo -e "项目发布成功!" 
